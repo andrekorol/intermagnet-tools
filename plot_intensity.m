@@ -6,7 +6,7 @@ files = {files.name};
 num_of_files = 0;
 for i = 1:numel(files)
     file = strcat('data', filesep, files(i));
-    [filepath,name,ext] = fileparts(file{1});
+    [~,~,ext] = fileparts(file{1});
     if strcmp(ext, '.gz')
         num_of_files = num_of_files + 1;
     end
